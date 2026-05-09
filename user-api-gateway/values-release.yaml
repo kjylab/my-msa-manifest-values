@@ -1,0 +1,18 @@
+image:
+  repository: kanei0415/ktcloud-msa-user-api-gateway
+  tag: latest
+  pullPolicy: IfNotPresent
+
+serviceName: user-api-gateway
+replicaCount: 2
+
+env:
+  SPRING_PROFILES_ACTIVE: "release"
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 200m
+    memory: 256Mi
