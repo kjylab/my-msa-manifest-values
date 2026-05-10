@@ -1,6 +1,6 @@
 image:
   repository: kanei0415/ktcloud-msa-user-api-gateway
-  tag: latest
+  tag: de9347d444cf0b00856ee3a7d9fa0840dba2ba3d
   pullPolicy: IfNotPresent
 
 serviceName: user-api-gateway
