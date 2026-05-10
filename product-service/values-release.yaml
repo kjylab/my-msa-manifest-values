@@ -3,16 +3,34 @@ image:
   tag: latest
   pullPolicy: IfNotPresent
 
-serviceName: product-service
-replicaCount: 2
+service:
+  type: ClusterIP
 
-env:
-  SPRING_PROFILES_ACTIVE: "release"
-
-resources:
-  limits:
-    cpu: 500m
-    memory: 512Mi
-  requests:
-    cpu: 200m
-    memory: 256Mi
+appConfig:
+  spring:
+    application:
+      name: product-service
+    datasource:
+      url: jdbc:postgresql://localhost:7001/product_db
+      username: product-service
+      password: product-service
+      driver-class-name: org.postgresql.Driver
+    jpa:
+      hibernate:
+        ddl-auto: create
+      generate-ddl: true
+      show-sql: true
+  server:
+    port: 8080
+  grpc:
+    server:
+      port: 9090
+  management:
+    endpoints:
+      web:
+        base-path: /
+        path-mapping:
+          health: healthz
+    endpoint:
+      health:
+        show-details: always

@@ -3,16 +3,41 @@ image:
   tag: latest
   pullPolicy: IfNotPresent
 
-serviceName: user-api-gateway
-replicaCount: 2
+service:
+  type: LoadBalancer
 
-env:
-  SPRING_PROFILES_ACTIVE: "release"
-
-resources:
-  limits:
-    cpu: 500m
-    memory: 512Mi
-  requests:
-    cpu: 200m
-    memory: 256Mi
+appConfig:
+  spring:
+    application:
+      name: user-api-gateway
+  grpc:
+    client:
+      product-service:
+        address: 'static://localhost:9001'
+        negotiation-type: plaintext
+      order-service:
+        address: 'static://localhost:9002'
+        negotiation-type: plaintext
+      inventory-service:
+        address: 'static://localhost:9003'
+        negotiation-type: plaintext
+  jwt:
+    secret: '${JWT_SECRET_ENV}'
+  server:
+    port: 8080
+  management:
+    endpoints:
+      web:
+        base-path: /
+        path-mapping:
+          health: healthz
+    endpoint:
+      health:
+        show-details: always
+  springdoc:
+    swagger-ui:
+      path: /swagger-ui.html
+      groups-order: DESC
+      operations-sorter: alpha
+    api-docs:
+      path: /v3/api-docs
