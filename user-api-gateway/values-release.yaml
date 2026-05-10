@@ -1,6 +1,6 @@
 image:
   repository: kanei0415/ktcloud-msa-user-api-gateway
-  tag: e4132704ab2445fafdbc66aacd8cf00a0b97413f
+  tag: 0aceac1f21d261ac894335cdffe9ec8586f6599d
   pullPolicy: IfNotPresent
 
 addons:
