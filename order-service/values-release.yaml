@@ -11,7 +11,7 @@ appConfig:
     application:
       name: order-service
     datasource:
-      url: jdbc:postgresql://localhost:7002/order_db
+      url: jdbc:postgresql://postgresql.postgresql.svc.cluster.local:5432/order_db
       username: order-service
       password: order-service
       driver-class-name: org.postgresql.Driver
@@ -21,7 +21,7 @@ appConfig:
       generate-ddl: true
       show-sql: true
     kafka:
-      bootstrap-servers: localhost:7003
+      bootstrap-servers: kafka.kafka.svc.cluster.local:9092
       consumer:
         group-id: order-service-group
         auto-offset-reset: earliest

@@ -11,7 +11,7 @@ appConfig:
     application:
       name: inventory-service
     datasource:
-      url: jdbc:postgresql://localhost:7004/inventory_db
+      url: jdbc:postgresql://postgresql.postgresql.svc.cluster.local:5432/inventory_db
       username: inventory-service
       password: inventory-service
       driver-class-name: org.postgresql.Driver
@@ -22,11 +22,11 @@ appConfig:
       show-sql: true
     data:
       redis:
-        host: localhost
-        port: 7005
-        password: inventory-service
+        host: redis-master.redis.svc.cluster.local
+        port: 6379
+        password: 1EjI4XSKmq
     kafka:
-      bootstrap-servers: localhost:7003
+      bootstrap-servers: kafka.kafka.svc.cluster.local:9092
       consumer:
         group-id: inventory-service-group
         auto-offset-reset: earliest
