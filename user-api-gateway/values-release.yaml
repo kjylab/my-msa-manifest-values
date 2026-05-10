@@ -3,6 +3,9 @@ image:
   tag: de9347d444cf0b00856ee3a7d9fa0840dba2ba3d
   pullPolicy: IfNotPresent
 
+addons:
+  
+
 service:
   type: LoadBalancer
 
@@ -13,13 +16,13 @@ appConfig:
   grpc:
     client:
       product-service:
-        address: 'static://localhost:9001'
+        address: 'static://product-service-release.svc.ktcloud-market-msa-release:9090'
         negotiation-type: plaintext
       order-service:
-        address: 'static://localhost:9002'
+        address: 'static://order-service-release.svc.ktcloud-market-msa-release:9090'
         negotiation-type: plaintext
       inventory-service:
-        address: 'static://localhost:9003'
+        address: 'static://inventory-service-release.svc.ktcloud-market-msa-release:9090'
         negotiation-type: plaintext
   jwt:
     secret: '${JWT_SECRET_ENV}'
