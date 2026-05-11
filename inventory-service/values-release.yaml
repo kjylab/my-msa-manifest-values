@@ -12,8 +12,8 @@ appConfig:
       name: inventory-service
     datasource:
       url: jdbc:postgresql://postgresql.postgresql.svc.cluster.local:5432/inventory_db
-      username: postgres
-      password: admin1234
+      username: inventory-service
+      password: inventory-service
       driver-class-name: org.postgresql.Driver
     jpa:
       database-platform: org.hibernate.dialect.PostgreSQLDialect
