@@ -1,6 +1,6 @@
 image:
   repository: kanei0415/ktcloud-msa-product-service
-  tag: 3b6ddff0edf19bf7cdf1e5b83aa4bc88f6eae314
+  tag: 80e35baa53ee025c1c685067be343506d6855766
   pullPolicy: IfNotPresent
 
 service:
