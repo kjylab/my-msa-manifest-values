@@ -12,8 +12,8 @@ appConfig:
       name: order-service
     datasource:
       url: jdbc:postgresql://postgresql.postgresql.svc.cluster.local:5432/order_db
-      username: order-service
-      password: order-service
+      username: postgres
+      password: admin1234
       driver-class-name: org.postgresql.Driver
     jpa:
       database-platform: org.hibernate.dialect.PostgreSQLDialect
