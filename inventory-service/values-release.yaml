@@ -1,6 +1,6 @@
 image:
   repository: kanei0415/ktcloud-msa-inventory-service
-  tag: bf7e976c56411db0df0ceb263793d2fd839e8c43
+  tag: cfc6e089b332c4cb72ae35b926b2b55eabe70909
   pullPolicy: IfNotPresent
 
 service:
