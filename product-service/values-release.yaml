@@ -16,6 +16,7 @@ appConfig:
       password: product-service
       driver-class-name: org.postgresql.Driver
     jpa:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
       hibernate:
         ddl-auto: create
       generate-ddl: true
