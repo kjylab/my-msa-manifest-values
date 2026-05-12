@@ -1,6 +1,6 @@
 image:
   repository: kjylab/my-msa-order-service
-  tag: 4c35d0ac86f04ba1edf70b62da3edf43e59957fc
+  tag: db765613f9d8edb3aca0c78d78a507576a0e071a
   pullPolicy: IfNotPresent
 
 service:
