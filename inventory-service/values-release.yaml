@@ -1,6 +1,6 @@
 image:
   repository: kjylab/my-msa-inventory-service
-  tag: eb74530b05172926e95daf560b954a54b5922f35
+  tag: 04bebf772e0ebd78a8cd9b12a192bb978735ee17
   pullPolicy: IfNotPresent
 
 service:
