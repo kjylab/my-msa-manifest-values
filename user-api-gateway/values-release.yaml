@@ -1,5 +1,5 @@
 image:
-  repository: kanei0415/ktcloud-msa-user-api-gateway
+  repository: kjylab/my-msa-user-api-gateway
   tag: 74c63c709b36b6f26e86da23b91a8949d2bfa8e2
   pullPolicy: IfNotPresent
 

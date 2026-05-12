@@ -1,5 +1,5 @@
 image:
-  repository: kanei0415/ktcloud-msa-product-service
+  repository: kjylab/my-msa-product-service
   tag: 80e35baa53ee025c1c685067be343506d6855766
   pullPolicy: IfNotPresent
 
