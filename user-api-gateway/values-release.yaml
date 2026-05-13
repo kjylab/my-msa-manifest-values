@@ -4,10 +4,22 @@ image:
   pullPolicy: IfNotPresent
 
 addons:
+
   
 
 service:
-  type: LoadBalancer
+  type: ClusterIP 
+  port: 8080
+
+ingress:
+  enabled: true
+  className: traefik
+  annotations: {}
+  paths:
+    - path: /
+      pathType: Prefix
+
+      
 
 appConfig:
   spring:
