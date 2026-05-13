@@ -7,6 +7,9 @@ service:
   type: ClusterIP
   port: 9090
 
+ingress:
+  enabled: false
+
 appConfig:
   spring:
     application:
