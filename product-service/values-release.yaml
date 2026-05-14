@@ -1,6 +1,6 @@
 image:
   repository: jyupk/my-msa-product-service
-  tag: a8a89e715a8e66d74d6ec3251a538809bd1fbb20
+  tag: 6f6ebf27127c36bbef0d0a7f56dc8fba51d3c017
   pullPolicy: IfNotPresent
 
 service:
