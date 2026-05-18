@@ -1,6 +1,6 @@
 image:
   repository: jyupk/my-msa-inventory-service
-  tag: fc57ce715abac65d855483d6a198b8426b522614
+  tag: 84f88db7447ed16f94f5a7b80ee6c3ca95c41359
   pullPolicy: IfNotPresent
 
 service:
