@@ -28,13 +28,13 @@ appConfig:
   grpc:
     client:
       product-service:
-        address: 'static://product-service:9090'
+        address: 'dns:///product-service.default.svc.cluster.local:9090'
         negotiation-type: plaintext
       order-service:
-        address: 'static://order-service:9090'
+        address: 'dns:///order-service.default.svc.cluster.local:9090'
         negotiation-type: plaintext
       inventory-service:
-        address: 'static://inventory-service:9090'
+        address: 'dns:///inventory-service.default.svc.cluster.local:9090'
         negotiation-type: plaintext
   jwt:
     secret: 'v7S6A9yB2E5H8KcNfUjXnZr4u7x!A%D*G-'
