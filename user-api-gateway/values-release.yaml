@@ -28,6 +28,10 @@ appConfig:
   spring:
     application:
       name: user-api-gateway
+    autoconfigure:
+      exclude:
+        - net.devh.boot.grpc.client.autoconfigure.GrpcClientMicrometerTraceAutoConfiguration
+        - net.devh.boot.grpc.client.autoconfigure.GrpcClientMetricAutoConfiguration
   grpc:
     client:
       product-service:
