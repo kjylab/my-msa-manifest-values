@@ -49,6 +49,16 @@ appConfig:
         base-path: /
         path-mapping:
           health: healthz
+        exposure:
+          include: health,prometheus
     endpoint:
       health:
         show-details: always
+      prometheus:
+        enabled: true
+    tracing:
+      sampling:
+        probability: 1.0
+    otlp:
+      tracing:
+        endpoint: http://tempo.monitoring.svc.cluster.local:4318/v1/traces
