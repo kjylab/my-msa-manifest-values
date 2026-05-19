@@ -30,6 +30,7 @@ appConfig:
       redis:
         host: redis-master.redis.svc.cluster.local
         port: 6379
+        password: admin1234
   jwt:
     secret: v7S6A9yB2E5H8KcNfUjXnZr4u7x!A%D*G-
     access-token-expiry-seconds: 1800
