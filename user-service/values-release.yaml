@@ -1,0 +1,49 @@
+image:
+  repository: jyupk/my-msa-user-service
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+
+serviceMonitor:
+  enabled: true
+
+ingress:
+  enabled: false
+
+appConfig:
+  spring:
+    application:
+      name: user-service
+    datasource:
+      url: jdbc:postgresql://postgresql.postgresql.svc.cluster.local:5432/auth_db
+      username: auth-service
+      password: auth-service
+      driver-class-name: org.postgresql.Driver
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: false
+  server:
+    port: 8080
+  management:
+    endpoints:
+      web:
+        base-path: /
+        path-mapping:
+          health: healthz
+        exposure:
+          include: health,prometheus
+    endpoint:
+      health:
+        show-details: always
+      prometheus:
+        enabled: true
+    tracing:
+      sampling:
+        probability: 1.0
+    otlp:
+      tracing:
+        endpoint: http://tempo.monitoring.svc.cluster.local:4318/v1/traces
