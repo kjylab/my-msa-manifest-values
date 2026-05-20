@@ -28,6 +28,7 @@ appConfig:
       show-sql: false
   server:
     port: 8080
+  grpc: {}
   management:
     endpoints:
       web:
