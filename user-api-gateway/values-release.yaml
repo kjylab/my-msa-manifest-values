@@ -1,6 +1,6 @@
 image:
   repository: jyupk/my-msa-user-api-gateway
-  tag: 3663e937a60f34c8e3ca3e1fdaf1afbb66f6e12e
+  tag: f6080e7b6d1383d8cfe551d1f23ca53880639f10
   pullPolicy: IfNotPresent
 
 serviceMonitor:
