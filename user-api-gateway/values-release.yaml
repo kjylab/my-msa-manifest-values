@@ -32,6 +32,17 @@ appConfig:
       exclude:
         - net.devh.boot.grpc.client.autoconfigure.GrpcClientMicrometerTraceAutoConfiguration
         - net.devh.boot.grpc.client.autoconfigure.GrpcClientMetricAutoConfiguration
+    cloud:
+      gateway:
+        routes:
+          - id: auth-service
+            uri: http://auth-service.default.svc.cluster.local:8080
+            predicates:
+              - Path=/api/auth/**
+          - id: user-service
+            uri: http://user-service.default.svc.cluster.local:8080
+            predicates:
+              - Path=/api/v1/users/**
   grpc:
     client:
       product-service:
