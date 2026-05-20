@@ -49,7 +49,7 @@ appConfig:
         address: 'dns:///product-service.default.svc.cluster.local:9090'
         negotiation-type: plaintext
       order-service:
-        address: 'dns:///order-service.default.svc.cluster.local:9999'
+        address: 'dns:///order-service.default.svc.cluster.local:9090'
         negotiation-type: plaintext
       inventory-service:
         address: 'dns:///inventory-service.default.svc.cluster.local:9090'
@@ -80,4 +80,5 @@ appConfig:
       operations-sorter: alpha
     api-docs:
       path: /v3/api-docs
+
 
