@@ -12,7 +12,7 @@
 ### GitOps 배포 흐름
 
 ```
-1. 소스코드 변경 → Git push (my-msa-product 레포)
+1. 소스코드 변경 → Git push (각 서비스 레포)
 2. GitHub Actions 실행
    a. JAR 빌드
    b. Docker 이미지 빌드 + Docker Hub push
@@ -25,15 +25,21 @@
 
 ```
 product-service/
-  values-release.yaml     # product-service Helm values
+  values-release.yaml
 
 inventory-service/
-  values-release.yaml     # inventory-service Helm values
+  values-release.yaml
 
 order-service/
   values-release.yaml
 
 user-api-gateway/
+  values-release.yaml
+
+auth-service/
+  values-release.yaml
+
+user-service/
   values-release.yaml
 ```
 
@@ -51,11 +57,15 @@ appConfig:
   spring:
     datasource:
       url: jdbc:postgresql://postgresql.postgresql.svc.cluster.local:5432/product_db
-  management:
-    endpoints:
-      web:
-        exposure:
-          include: health,prometheus   # actuator 엔드포인트 노출
+    kafka:
+      bootstrap-servers: kafka.kafka.svc.cluster.local:9092
+      topic:
+        inventory-reserve-request: inventory-reserve-request-topic
+        inventory-reserved-result: inventory-reserved-result-topic
+    management:
+      otlp:
+        tracing:
+          endpoint: http://tempo.monitoring.svc.cluster.local:4318/v1/traces
 ```
 
 ## 수동으로 이미지 롤백하는 방법
