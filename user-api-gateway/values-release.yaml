@@ -43,6 +43,18 @@ appConfig:
             uri: http://user-service.default.svc.cluster.local:8080
             predicates:
               - Path=/api/v1/users/**
+          - id: order-service
+            uri: http://order-service.default.svc.cluster.local:8080
+            predicates:
+              - Path=/api/orders/**
+          - id: product-service
+            uri: http://product-service.default.svc.cluster.local:8080
+            predicates:
+              - Path=/api/products/**
+          - id: inventory-service
+            uri: http://inventory-service.default.svc.cluster.local:8080
+            predicates:
+              - Path=/api/inventories/**
   grpc:
     client:
       product-service:
