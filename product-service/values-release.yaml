@@ -18,7 +18,7 @@ appConfig:
     application:
       name: product-service
     datasource:
-      url: jdbc:postgresql://postgresql.postgresql.svc.cluster.local:5432/product_db
+      url: jdbc:postgresql://product-db-rw.postgresql.svc.cluster.local:5432/product_db
       username: product-service
       password: product-service
       driver-class-name: org.postgresql.Driver

@@ -18,7 +18,7 @@ appConfig:
     application:
       name: order-service
     datasource:
-      url: jdbc:postgresql://postgresql.postgresql.svc.cluster.local:5432/order_db
+      url: jdbc:postgresql://order-db-rw.postgresql.svc.cluster.local:5432/order_db
       username: order-service
       password: order-service
       driver-class-name: org.postgresql.Driver

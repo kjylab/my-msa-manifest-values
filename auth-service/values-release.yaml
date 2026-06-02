@@ -18,7 +18,7 @@ appConfig:
     application:
       name: auth-service
     datasource:
-      url: jdbc:postgresql://postgresql.postgresql.svc.cluster.local:5432/auth_db
+      url: jdbc:postgresql://auth-db-rw.postgresql.svc.cluster.local:5432/auth_db
       username: auth-service
       password: auth-service
       driver-class-name: org.postgresql.Driver

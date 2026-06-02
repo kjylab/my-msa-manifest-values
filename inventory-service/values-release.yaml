@@ -18,7 +18,7 @@ appConfig:
     application:
       name: inventory-service
     datasource:
-      url: jdbc:postgresql://postgresql.postgresql.svc.cluster.local:5432/inventory_db
+      url: jdbc:postgresql://inventory-db-rw.postgresql.svc.cluster.local:5432/inventory_db
       username: inventory-service
       password: inventory-service
       driver-class-name: org.postgresql.Driver
