@@ -13,16 +13,7 @@ service:
   port: 8080
 
 ingress:
-  enabled: true
-  className: traefik
-  annotations:
-    "service.beta.kubernetes.io/aws-load-balancer-type": "nlb"
-    "service.beta.kubernetes.io/aws-load-balancer-cross-zone-load-balancing-enabled": "true"
-    "service.beta.kubernetes.io/aws-load-balancer-scheme": "internet-facing"
-    "traefik.ingress.kubernetes.io/router.middlewares": "default-rate-limit@kubernetescrd"
-  paths:
-    - path: /
-      pathType: Prefix
+  enabled: false
       
 
 appConfig:
