@@ -13,6 +13,10 @@ serviceMonitor:
 ingress:
   enabled: false
 
+envFrom:
+  - secretRef:
+      name: inventory-service-secret
+
 appConfig:
   spring:
     application:
@@ -20,7 +24,7 @@ appConfig:
     datasource:
       url: jdbc:postgresql://inventory-db-rw.postgresql.svc.cluster.local:5432/inventory_db
       username: inventory-service
-      password: inventory-service
+      password: ${DB_PASSWORD}
       driver-class-name: org.postgresql.Driver
     jpa:
       database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -32,7 +36,7 @@ appConfig:
       redis:
         host: redis-master.redis.svc.cluster.local
         port: 6379
-        password: admin1234
+        password: ${REDIS_PASSWORD}
     kafka:
       bootstrap-servers: kafka.kafka.svc.cluster.local:9092
       consumer:

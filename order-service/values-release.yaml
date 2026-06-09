@@ -13,6 +13,10 @@ serviceMonitor:
 ingress:
   enabled: false
 
+envFrom:
+  - secretRef:
+      name: order-service-secret
+
 appConfig:
   spring:
     application:
@@ -20,7 +24,7 @@ appConfig:
     datasource:
       url: jdbc:postgresql://order-db-rw.postgresql.svc.cluster.local:5432/order_db
       username: order-service
-      password: order-service
+      password: ${DB_PASSWORD}
       driver-class-name: org.postgresql.Driver
     jpa:
       database-platform: org.hibernate.dialect.PostgreSQLDialect
