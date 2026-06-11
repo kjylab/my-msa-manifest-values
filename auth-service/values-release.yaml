@@ -1,6 +1,6 @@
 image:
   repository: jyupk/my-msa-auth-service
-  tag: eea7a2e158c7ea23be50f7c9326598d631b4ef49
+  tag: b244c6b95c9eb3b7b5ba2092356f06808ea8bbd5
   pullPolicy: IfNotPresent
 
 service:
