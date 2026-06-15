@@ -1,6 +1,6 @@
 image:
   repository: 577201457903.dkr.ecr.ap-northeast-2.amazonaws.com/msa/order-service
-  tag: 00a676c69f2a8d74eace863bfabebce5022fe91d
+  tag: e08d02f96623983372c7029cbd63b7265ebf9388
   pullPolicy: IfNotPresent
 
 service:
