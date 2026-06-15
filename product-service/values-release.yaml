@@ -1,5 +1,5 @@
 image:
-  repository: jyupk/my-msa-product-service
+  repository: 577201457903.dkr.ecr.ap-northeast-2.amazonaws.com/msa/product-service
   tag: 9d1dc396f98f069ebe5f145ed4cdd29670d4aaeb
   pullPolicy: IfNotPresent
 

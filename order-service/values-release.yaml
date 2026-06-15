@@ -1,5 +1,5 @@
 image:
-  repository: jyupk/my-msa-order-service
+  repository: 577201457903.dkr.ecr.ap-northeast-2.amazonaws.com/msa/order-service
   tag: 00a676c69f2a8d74eace863bfabebce5022fe91d
   pullPolicy: IfNotPresent
 

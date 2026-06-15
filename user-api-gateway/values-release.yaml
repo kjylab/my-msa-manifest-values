@@ -1,5 +1,5 @@
 image:
-  repository: jyupk/my-msa-user-api-gateway
+  repository: 577201457903.dkr.ecr.ap-northeast-2.amazonaws.com/msa/api-gateway
   tag: 9e0525ba8ce87ddfe0eeea1b8b53dc220fbfd408
   pullPolicy: IfNotPresent
 

@@ -1,5 +1,5 @@
 image:
-  repository: jyupk/my-msa-auth-service
+  repository: 577201457903.dkr.ecr.ap-northeast-2.amazonaws.com/msa/auth-service
   tag: 6632c8cbf3dfc4f2b00e0edb6708c6533c10be49
   pullPolicy: IfNotPresent
 
