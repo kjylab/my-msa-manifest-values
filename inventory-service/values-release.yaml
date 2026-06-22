@@ -1,6 +1,6 @@
 image:
   repository: 577201457903.dkr.ecr.ap-northeast-2.amazonaws.com/msa/inventory-service
-  tag: 7ab746df3d4e2ce9a6429a318ce950e42416e6df
+  tag: 9d5248d4fe517a3a18d541adfe531041a8e3aa90
   pullPolicy: IfNotPresent
 
 service:
