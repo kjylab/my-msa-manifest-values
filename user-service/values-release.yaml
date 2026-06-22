@@ -1,6 +1,6 @@
 image:
   repository: 577201457903.dkr.ecr.ap-northeast-2.amazonaws.com/msa/user-service
-  tag: a56fbfd08ab1055a3c05e96956357a71f3515f57
+  tag: fb064f823d449703943adfef7381b730d86980ac
   pullPolicy: IfNotPresent
 
 service:
