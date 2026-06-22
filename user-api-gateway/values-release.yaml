@@ -1,6 +1,6 @@
 image:
   repository: 577201457903.dkr.ecr.ap-northeast-2.amazonaws.com/msa/api-gateway
-  tag: 219c4052d0b74e3ead41d9938397abc380c473a4
+  tag: ad2c1303bc79766bcc16500152bd293eb9ad4d71
   pullPolicy: IfNotPresent
 
 serviceMonitor:
